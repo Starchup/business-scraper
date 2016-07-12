@@ -9,6 +9,7 @@ google_places = GooglePlaces('AIzaSyCGjlpc3LYhzBYGS0hjXpXDPvk_kaVs_IE')
 def main():
     target = ''
     types = ''
+    searcharea = 3200;
 
     #Location input
     choice = raw_input("What location would you like to search near? ")
@@ -100,6 +101,8 @@ def main():
         else:
             break
 
+    searcharea = input("How large of a radius would you like to search? ")
+
     # helper to format the incomming google place data into csv
     def getPlaceData(place):
         data = [];
@@ -120,10 +123,10 @@ def main():
         #print(place.name)
         return [data]
 
-    def getMorePlaces(target, types, token=None):
+    def getMorePlaces(target, types, searcharea, token=None):
         return google_places.nearby_search(location=target,
                                         lat_lng=None,
-                                        radius=50000,
+                                        radius=searcharea,
                                         types=types,
                                         pagetoken=token)
 
@@ -152,11 +155,11 @@ def main():
         a.writerows([[]])
 
         try:
-            query_result = getMorePlaces(target, types)
+            query_result = getMorePlaces(target, types, searcharea)
             outputPlaces(a, query_result.places)
 
             while (query_result.next_page_token is not None):
-                query_result = getMorePlaces(target, types, query_result.next_page_token)
+                query_result = getMorePlaces(target, types, searcharea, query_result.next_page_token)
                 outputPlaces(a, query_result.places)
 
         except IOError as e:
