@@ -220,7 +220,7 @@ class GooglePlaces(object):
 
     def nearby_search(self, language=lang.ENGLISH, keyword=None, location=None,
                lat_lng=None, name=None, radius=3200, rankby=ranking.PROMINENCE,
-               sensor=False, types=[], pagetoken=None, resultlimit=None):
+               sensor=False, types=[], pagetoken=None):
         """Perform a nearby search using the Google Places API.
 
         One of either location or lat_lng are required, the rest of the keyword
