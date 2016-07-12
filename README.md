@@ -1,12 +1,18 @@
 # scraper-cleaners
 
 Scape Google places for Dry Cleaners into a csv.
-Pass it a location and it will find all Google listed dry cleaners within ~30 miles of that location.
+Pass it a location and it will find all Google listed dry cleaners within a defined area in kilometers of that location.
 
 #### Requirements
 * python 2.7  
 
 #### Use
-`python scraper.py`  
 
--Follow the prompts by entering your target area and then the type of businesses you want to find.
+Install Python
+
+1. Download the zip from GitHub
+2. Extract it to a folder
+3. Open your terminal inside of said folder
+4. Run `python scraper.py`  
+
+-Follow the prompts by entering your target area, the type of businesses you want to find, then the radius within you want to search.
