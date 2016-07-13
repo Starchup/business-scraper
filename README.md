@@ -12,7 +12,7 @@ Install Python
 
 1. Download the zip from GitHub (If you're on MacOS: https://www.python.org/downloads/release/python-2712/)
 
-  A. Read the instructions for installation. Use Mac OS X 64-bit/32-bit installer.
+  A. Use Mac OS X 64-bit/32-bit installer. Double click the PKG file to install and follow the prompts.
 2. Extract it to a folder
 3. Open your terminal inside of said folder
 4. Run `python scraper.py`  
