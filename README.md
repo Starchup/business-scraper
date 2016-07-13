@@ -10,7 +10,8 @@ Pass it a location and it will find all Google listed dry cleaners within a defi
 
 Install Python
 
-1. Download the zip from GitHub
+1. Download the zip from GitHub (If you're on MacOS: https://www.python.org/downloads/release/python-2712/)
+  A. Read the instructions for installation. Use Mac OS X 64-bit/32-bit installer.
 2. Extract it to a folder
 3. Open your terminal inside of said folder
 4. Run `python scraper.py`  
